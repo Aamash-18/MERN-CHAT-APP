@@ -44,7 +44,7 @@ function App() {
       });
       return () => socket.close();
     }
-  }, [authUser]);
+  }, [authUser, dispatch]);
   return (
     <>
       <div className="h-screen p-4 flex items-center justify-center ">
