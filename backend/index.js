@@ -62,7 +62,9 @@ io.on("connection", (socket) => {
 });
 
 // ✅ ONLY THIS should listen
-server.listen(PORT, () => {
-  connectDB();
-  console.log(`Server running at PORT ${PORT}`);
+connectDB().then(() => {
+  server.listen(PORT, () => {
+    console.log(`Server running at PORT ${PORT}`);
+  });
 });
+
