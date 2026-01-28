@@ -20,9 +20,13 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-  origin: process.env.CLIENT_URL,
+  origin: [
+    process.env.CLIENT_URL,
+    "http://localhost:5173"
+  ],
   credentials: true,
 }));
+
 
 // routes
 app.use("/api/v1/user", userRouter);
@@ -31,9 +35,13 @@ app.use("/api/v1/message", messageRouter);
 // socket.io
 export const io = new Server(server, {
   cors: {
-    origin: process.env.CLIENT_URL,
-    credentials: true,
-  },
+  origin: [
+    process.env.CLIENT_URL,
+    "http://localhost:5173"
+  ],
+  credentials: true,
+},
+
 });
 
 const userSocketMap={};
