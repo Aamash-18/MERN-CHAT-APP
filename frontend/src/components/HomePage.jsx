@@ -1,5 +1,5 @@
 import SideBar from "./Sidebar";
-import MessageContainer from "./messageContainer";
+import MessageContainer from "./MessageContainer";
 const HomePage = () => {
   return (
     <div className=" md: h-[500px] bg-gray-50 dark:bg-gray-900 rounded-lg">
