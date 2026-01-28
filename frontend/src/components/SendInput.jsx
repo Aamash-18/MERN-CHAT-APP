@@ -13,14 +13,14 @@ const SendInput = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/message/send/${selectedUser?._id}`,
+        `https://mern-chat-app-0neo.onrender.com/api/v1/message/send/${selectedUser?._id}`,
         { message },
         {
           headers: {
             "Content-Type": "application/json",
           },
           withCredentials: true,
-        }
+        },
       );
       dispatch(setMessages([...messages, res?.data?.newMessage]));
       setMessage("");

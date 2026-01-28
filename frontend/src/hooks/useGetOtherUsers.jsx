@@ -9,7 +9,9 @@ const useGetOtherUsers = () => {
     const fetchOhterUsers = async () => {
       try {
         axios.defaults.withCredentials = true;
-        const res = await axios.get("http://localhost:8080/api/v1/user/");
+        const res = await axios.get(
+          "https://mern-chat-app-0neo.onrender.com/api/v1/user/",
+        );
         // console.log(res);
         dispatch(setOtherUser(res.data));
       } catch (err) {

@@ -20,7 +20,7 @@ function Signup() {
     } else {
       try {
         const res = await axios.post(
-          "http://localhost:8080/api/v1/user/register",
+          "https://mern-chat-app-0neo.onrender.com/api/v1/user/register",
           user,
           {
             headers: {

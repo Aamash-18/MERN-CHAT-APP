@@ -16,14 +16,14 @@ function Login() {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:8080/api/v1/user/login",
+        "https://mern-chat-app-0neo.onrender.com/api/v1/user/login",
         user,
         {
           headers: {
             "Content-Type": "application/json",
           },
           withCredentials: true,
-        }
+        },
       );
 
       console.log(res);

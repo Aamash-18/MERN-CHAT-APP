@@ -33,7 +33,7 @@ function App() {
   const { authUser, onlineUser } = useSelector((store) => store.user);
   useEffect(() => {
     if (authUser) {
-      const socket = io("http://localhost:8080", {
+      const socket = io("https://mern-chat-app-0neo.onrender.com", {
         query: {
           userId: authUser._id,
         },
