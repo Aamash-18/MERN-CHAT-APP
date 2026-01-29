@@ -8,7 +8,7 @@ const OtherUsers = (props) => {
 
   // fetch data from redux store
   const { otherUser } = useSelector((store) => store.user);
-  if (!otherUser) return;
+  if (!otherUser) return null;
 
   const filteredUser = otherUser.filter((user) =>
     user.fullname.toLowerCase().includes(props.search.toLowerCase()),
