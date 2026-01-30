@@ -29,7 +29,9 @@ const Message = (props) => {
             {formatIST(props.message.createdAt)}
           </time>
         </div>
-        <div className="chat-bubble">{props.message.message}</div>
+        <div className="chat-bubble break-words max-w-full">
+          {props.message.message}
+        </div>
         {/* <div className="chat-footer opacity-50">Seen</div> */}
       </div>
     </div>

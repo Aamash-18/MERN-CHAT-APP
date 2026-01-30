@@ -10,7 +10,7 @@ const Messages = () => {
   const { messages } = useSelector((store) => store.messages);
   if (!messages) return;
   return (
-    <div className=" px-4 flex-1 overflow-auto">
+    <div className=" px-4 flex-1 overflow-auto  w-full">
       {messages?.map((message) => {
         return <Message key={message._id} message={message} />;
       })}

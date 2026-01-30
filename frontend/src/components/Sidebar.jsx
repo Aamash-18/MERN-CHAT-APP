@@ -8,7 +8,7 @@ import { clearAllUser, setOtherUser } from "../redux/userSlice";
 import { clearAllMessages } from "../redux/messageSlice";
 import OtherUsers from "./OtherUsers";
 
-const SideBar = () => {
+const SideBar = ({ closeSidebar }) => {
   const [search, setSearch] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -27,14 +27,14 @@ const SideBar = () => {
   };
 
   return (
-    <div className="flex flex-col h-[80vh] border-slate-500 p-4 ">
+    <div className="flex flex-col h-screen md:h-[80vh] border-slate-500 p-4">
       <form action="" className="flex items-center gap-2">
         <input
           value={search}
           onChange={(e) => {
             setSearch(e.target.value);
           }}
-          className="input rounded-md focus:outline-none focus:ring-0"
+          className="input rounded-md focus:outline-none focus:ring-0 "
           type="text"
           placeholder="search friend"
         />
@@ -46,7 +46,7 @@ const SideBar = () => {
         </button> */}
       </form>
       <div className="divider px-3"> </div>
-      <OtherUsers search={search} />
+      <OtherUsers search={search} closeSidebar={closeSidebar} />
       <div>
         <button
           type="submit"

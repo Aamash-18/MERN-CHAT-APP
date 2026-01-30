@@ -17,7 +17,13 @@ const OtherUsers = (props) => {
   return (
     <div className="overflow-auto flex-1">
       {(props.search === "" ? otherUser : filteredUser)?.map((user) => {
-        return <OtherUser key={user._id} user={user} />;
+        return (
+          <OtherUser
+            key={user._id}
+            user={user}
+            closeSidebar={props.closeSidebar}
+          />
+        );
       })}
     </div>
   );
