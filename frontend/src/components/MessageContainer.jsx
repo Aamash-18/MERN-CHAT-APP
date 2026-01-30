@@ -11,8 +11,8 @@ const MessageContainer = () => {
   return (
     <>
       {selectedUser !== null ? (
-        <div className="w-full md:min-w-[550px] md:max-w-[550px] h-[60vh] md:h-[80vh] flex flex-col">
-          <div className="flex gap-4 items-center bg-gray-800 rounded-lg p-2 pl-12 md:pl-4">
+        <div className="w-full md:min-w-[550px] md:max-w-[550px] h-screen md:h-[80vh] flex flex-col  overflow-hidden">
+          <div className="flex gap-4 items-center bg-gray-800 rounded-lg p-2 pl-15 md:pl-6">
             {/* Profile photo  */}
             <div className={`avatar ${isOnline ? "avatar-online" : ""}`}>
               <div className="w-10 rounded-full">
@@ -26,7 +26,7 @@ const MessageContainer = () => {
           <SendInput />
         </div>
       ) : (
-        <div className="w-full md:min-w-[550px] h-[60vh] md:h-[80vh] flex flex-col justify-center items-center text-center px-4">
+        <div className="w-full md:min-w-[550px] h-full md:h-[80vh] flex flex-col justify-center items-center text-center px-4  overflow-hidden">
           <h1 className="text-2xl md:text-4xl text-white font-bold">
             Hi, {authUser?.fullname}{" "}
           </h1>
