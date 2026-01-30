@@ -52,7 +52,7 @@ function App() {
   }, [authUser, dispatch]);
   return (
     <>
-      <div className="h-screen p-4 flex items-center justify-center ">
+      <div className="h-screen flex items-center justify-center ">
         <RouterProvider router={router} />
       </div>
     </>
