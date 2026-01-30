@@ -7,7 +7,7 @@ const HomePage = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <div className="md:h-[500px] bg-gray-50 dark:bg-gray-900 md:rounded-lg relative">
+    <div className="h-[100dvh] md:h-[500px] bg-gray-50 dark:bg-gray-900 rounded-lg relative overflow-hidden md:overflow-visible">
       {/* Mobile Toggle Button */}
       {!showSidebar && (
         <button
