@@ -11,7 +11,7 @@ const MessageContainer = () => {
   return (
     <>
       {selectedUser !== null ? (
-        <div className="w-full md:min-w-[550px] md:max-w-[550px] h-screen md:h-[80vh] flex flex-col  overflow-hidden">
+        <div className="w-screen md:min-w-[550px] md:max-w-[550px] h-screen md:h-[80vh] flex flex-col  overflow-hidden">
           <div className="flex gap-4 items-center bg-gray-800 rounded-lg p-2 pl-15 md:pl-6">
             {/* Profile photo  */}
             <div className={`avatar ${isOnline ? "avatar-online" : ""}`}>
