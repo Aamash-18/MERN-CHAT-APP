@@ -12,13 +12,13 @@ const HomePage = () => {
       {!showSidebar && (
         <button
           onClick={() => setShowSidebar(true)}
-          className="md:hidden absolute top-6 left-6 z-50"
+          className="md:hidden absolute top-4 left-6 z-50"
         >
           <FiMenu size={26} />
         </button>
       )}
 
-      <div className="flex flex-col md:flex-row justify-center md:px-3 py-3 lg:py-5">
+      <div className="flex flex-col md:flex-row justify-center md:px-3 md:py-3 lg:py-5">
         {/* Sidebar */}
         <div
           className={`
