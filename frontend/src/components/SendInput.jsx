@@ -29,7 +29,11 @@ const SendInput = () => {
     }
   };
   return (
-    <form onSubmit={onSubmitHandler} action="#" className="px-4 my-3">
+    <form
+      onSubmit={onSubmitHandler}
+      action="#"
+      className="px-4 py-2 md:my-3 flex-shrink-0 sticky bottom-0 bg-gray-900"
+    >
       <div className="w-full relative">
         <input
           type="text"
