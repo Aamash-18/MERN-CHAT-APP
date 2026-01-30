@@ -10,12 +10,17 @@ import { useEffect } from "react";
 import io from "socket.io-client";
 import { setOnlineUser } from "./redux/userSlice";
 import { setSocket } from "./redux/socketSlice";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 // creating router
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: (
+      <ProtectedRoute>
+        <HomePage />
+      </ProtectedRoute>
+    ),
   },
   {
     path: "/signup",
