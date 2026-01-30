@@ -18,7 +18,7 @@ const HomePage = () => {
         </button>
       )}
 
-      <div className="flex flex-col md:flex-row justify-center px-3 py-3 lg:py-5">
+      <div className="flex flex-col md:flex-row justify-center md:px-3 py-3 lg:py-5">
         {/* Sidebar */}
         <div
           className={`
