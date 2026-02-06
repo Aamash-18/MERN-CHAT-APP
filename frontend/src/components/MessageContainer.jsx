@@ -26,11 +26,11 @@ const MessageContainer = () => {
           <SendInput />
         </div>
       ) : (
-        <div className="w-screen md:min-w-[550px] h-screen md:h-[80vh] flex flex-col justify-center items-center text-center px-4  overflow-hidden">
+        <div className="w-full md:min-w-[550px] h-screen md:h-[80vh] flex flex-col justify-center items-center text-center px-4  overflow-hidden">
           <h1 className="text-2xl md:text-4xl text-white font-bold">
             Hi, {authUser?.fullname}{" "}
           </h1>
-          <h1 className="text-lg md:text-2xl text-white mt-2">
+          <h1 className="text-lg md:text-2xl text-white mt-2 dark:text-gray-800">
             Let's start conversation
           </h1>
         </div>
