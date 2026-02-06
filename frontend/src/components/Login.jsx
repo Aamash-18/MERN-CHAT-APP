@@ -33,7 +33,7 @@ function Login() {
         console.log(res.data);
         dispatch(setAuthUser(res.data));
       } else {
-        // toast(res.data.message);
+        toast(res.data.message);
       }
     } catch (err) {
       // toast.error(err.response.data.message);
