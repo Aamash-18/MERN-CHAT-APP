@@ -36,9 +36,9 @@ function Login() {
         toast(res.data.message);
       }
     } catch (err) {
-      // toast.error(err.response.data.message);
-      console.log(err);
+      toast.error(err.response?.data?.message || "Login failed");
     }
+
     console.log(user);
     setUser({
       username: "",
